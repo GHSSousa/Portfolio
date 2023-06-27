@@ -3,11 +3,32 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', 'sans-serif';
+    scroll-behavior: smooth;
 }
 
+html {
+    font-size: 99%;
+    overflow-x: hidden;
+}
+
+:root {
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #fc0fc0;
+
+}
+
+
+
 body {
-    background-color: #1f242d;
-    color: #fff;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 2rem 10% 2rem;
 }
 
 .header {
@@ -15,8 +36,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 150px;
-    background: transparent;
+    padding: 2rem 9%;
+    background: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -151,9 +172,8 @@ body {
 .bnt {
     display: inline-block;
     padding: 12px 28px;
-    background: #fc0fc0;
+    background: #fff;
     border-radius: 40px;
-    box-shadow: 0 0 10px #fc0fc0;
     font-size: 16px;
     color: #1f242d;
     letter-spacing: 1px;
@@ -163,6 +183,10 @@ body {
     animation: slideTop 1s ease forwards;
     animation-delay: 2s;
 
+}
+
+.bnt:hover {
+    box-shadow: 0 0 1rem var(--main-color);
 }
 
 /*KEYFRAMES ANIMATION */
@@ -274,6 +298,10 @@ h1, h2, h3 {
 
 .section {
     padding-block: 2.5rem;
+}
+
+.skills{
+    background-color: var(--second-bg-color);
 }
 
 .skills-title {
@@ -391,6 +419,10 @@ div {
     gap: 1.5rem;
 }
 
+.services{
+    background-color: var(--second-bg-color);
+}
+
 .services h2{
     margin-bottom: 5rem;
 }
@@ -398,13 +430,13 @@ div {
 .services-container{
     display: flex;
     justify-content: center;
-    padding: 3rem 15rem 4rem;
     align-items: center;
+    flex-wrap: wrap ;
     gap: 2rem;
 }
 
 .services-container .services-box{
-    flex: 1 1 30rem;
+    flex: 1 1 1rem;
     background: none;
     padding: 3rem 2rem 4rem;
     border-radius: 2rem;
@@ -515,4 +547,90 @@ div {
 .portifolio-layer a i{
     font-size: 2rem;
     color:#fc0fc0
+}
+
+.contact {
+    background: var(--second-bg-color);
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+
+}
+
+.contact span{
+    color: var(--main-color);
+}
+
+.contact form {
+    max-width: 50rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .bnt {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+}
+
+.footer-text p {
+    font-size: 1.0rem;
+
+}
+
+.footer-icontop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: #fff;
+    border-radius: .8rem;
+    transition: .5s ease;
+
+}
+
+.footer-icontop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+
+}
+
+.footer-icontop a i{
+    font-size: 1.5rem;
+    color: var(--second-bg-color);
 }
